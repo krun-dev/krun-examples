@@ -53,8 +53,17 @@ Wrangler 在构建时执行 Vite，本地 R2 模拟器持久化开发文件；�
 ```bash
 npm test
 npm run build
-npx wrangler deploy --dry-run --outdir .data/worker
+npx --yes wrangler@4.155.0 deploy --dry-run --outdir .data/worker
 ```
 
 前端是纯静态产物，后端和前端分别由 Worker 与资产服务处理。列表中的文件、大小和连接
 状态均来自真实 API，没有内置的虚构文件数据。
+
+## 验证真实对象存储
+
+```bash
+npm run verify -- https://your-worker.example.com
+```
+
+脚本创建自己的随机文件，验证上传、字节一致的读取、HEAD、分页列举和删除，
+并在验证结束后清理验收文件，不会改动其他对象。省略地址时验证本地 `127.0.0.1:8788`。
