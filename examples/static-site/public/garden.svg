@@ -1,0 +1,124 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="560"
+  height="620"
+  viewBox="0 0 560 620"
+  fill="none"
+>
+  <defs>
+    <clipPath id="window">
+      <path d="M100 384V211a180 180 0 0 1 360 0v173Z" />
+    </clipPath>
+    <linearGradient
+      id="sky"
+      x1="280"
+      y1="30"
+      x2="280"
+      y2="390"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop stop-color="#EEDDB0" />
+      <stop offset="1" stop-color="#F4EBD4" />
+    </linearGradient>
+    <linearGradient
+      id="pot"
+      x1="205"
+      y1="460"
+      x2="348"
+      y2="533"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop stop-color="#C87A52" />
+      <stop offset="1" stop-color="#A85F40" />
+    </linearGradient>
+  </defs>
+  <path fill="#E6E7D7" d="M0 0h560v620H0z" />
+  <path d="M65 409V210a215 215 0 0 1 430 0v199Z" fill="#D3D8C4" />
+  <path d="M84 396V212a196 196 0 0 1 392 0v184Z" fill="#F6F0DA" />
+  <g clip-path="url(#window)">
+    <path fill="url(#sky)" d="M100 30h360v365H100z" />
+    <circle cx="361" cy="149" r="40" fill="#D3A15B" />
+    <path
+      d="M56 316c69-70 123-111 190-72s128 72 228-18l43 181H56Z"
+      fill="#AAB394"
+    />
+    <path
+      d="M60 358c69-30 99-14 161 3s117-88 193-69 112 28 130 36v92H60Z"
+      fill="#7D9376"
+    />
+    <path d="M91 390c122-42 182 25 274-5s109-24 125-9v53H91Z" fill="#5F7A60" />
+    <path d="M264 33v367M94 236h373" stroke="#F6F0DA" stroke-width="12" />
+  </g>
+  <path
+    d="M100 384V211a180 180 0 0 1 360 0v173"
+    stroke="#C4CBB5"
+    stroke-width="2"
+  />
+  <path d="M51 400h458v14H51z" fill="#C0C8AE" />
+  <path d="M51 414h458v13H51z" fill="#D6DCC8" />
+  <path d="M0 498h560v122H0z" fill="#D5D9C1" />
+  <path d="m379 427 144 71H333l-83-71Z" fill="#E5E5CF" />
+  <ellipse cx="278" cy="550" rx="112" ry="12" fill="#B4BE9F" />
+  <path
+    d="M227 474c12-53 4-106-15-149M269 480c-4-80 10-157 43-218M286 488c39-71 65-104 94-124M252 478c-39-48-67-73-93-82"
+    stroke="#526B42"
+    stroke-width="5"
+    stroke-linecap="round"
+  />
+  <path d="M212 338c-45-1-70-34-65-67 41 2 69 24 65 67Z" fill="#73884F" />
+  <path d="M221 370c34-9 47-31 42-63-33 12-47 35-42 63Z" fill="#516D45" />
+  <path d="M285 335c-42-12-56-42-46-77 35 12 54 42 46 77Z" fill="#7D8E50" />
+  <path d="M302 283c-14-37 2-69 37-83 14 37-2 71-37 83Z" fill="#5B7646" />
+  <path d="M287 359c39 2 66-20 72-56-41-2-66 19-72 56Z" fill="#8E9D61" />
+  <path d="M328 421c-15-32-8-61 19-79 16 30 9 60-19 79Z" fill="#5E7B4B" />
+  <path d="M362 382c25 9 55-2 69-28-29-12-55 0-69 28Z" fill="#7E9259" />
+  <path d="M192 427c-34 13-64 1-79-30 33-12 64 0 79 30Z" fill="#7B8D55" />
+  <path d="M214 452c13-32 5-57-20-75-16 28-9 56 20 75Z" fill="#94A16C" />
+  <path d="m205 472 18 74c2 9 95 10 98 0l20-74Z" fill="url(#pot)" />
+  <ellipse cx="273" cy="473" rx="68" ry="12" fill="#CE8861" />
+  <ellipse cx="273" cy="473" rx="56" ry="7" fill="#755B3E" />
+  <path
+    d="M228 490c3 19 5 35 9 46"
+    stroke="#D89770"
+    stroke-width="4"
+    stroke-linecap="round"
+  />
+  <path
+    d="M236 473c-2-15-10-26-17-34m45 35 1-26m17 25 14-23"
+    stroke="#526B42"
+    stroke-width="5"
+    stroke-linecap="round"
+  />
+  <path d="m71 529 83-5 20 29-83 6Z" fill="#F4EFDA" />
+  <path d="m91 559 83-6v8l-83 6Z" fill="#B9B595" />
+  <path d="m71 529 20 30v8l-20-29Z" fill="#D4CCAB" />
+  <path
+    d="m94 535 39-2m-35 8 26-2"
+    stroke="#9FA684"
+    stroke-width="2"
+    stroke-linecap="round"
+  />
+  <path d="M388 499h40v31a20 20 0 0 1-40 0Z" fill="#F3EEDD" />
+  <path d="M427 504h4a11 11 0 0 1 0 22h-4" stroke="#F3EEDD" stroke-width="7" />
+  <ellipse cx="408" cy="499" rx="20" ry="5" fill="#E3DBC3" />
+  <ellipse cx="408" cy="500" rx="15" ry="3" fill="#9D8A5E" />
+  <path
+    d="M404 484c-8-8 8-15 0-23m12 24c-8-8 8-15 0-23"
+    stroke="#F6F1DF"
+    stroke-width="2"
+    stroke-linecap="round"
+  />
+  <path d="M24 585h89m334 0h89" stroke="#B9C2A4" stroke-width="1" />
+  <text
+    x="280"
+    y="589"
+    text-anchor="middle"
+    font-family="Georgia,serif"
+    font-style="italic"
+    font-size="12"
+    letter-spacing="2"
+    fill="#6F7D5D"
+  >
+    a little room to grow
+  </text>
+</svg>
