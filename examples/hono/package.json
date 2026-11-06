@@ -1,0 +1,8 @@
+{
+  "name": "krun-hono-demo",
+  "private": true,
+  "type": "module",
+  "scripts": { "dev": "wrangler dev", "check": "wrangler deploy --dry-run --outdir .data/worker" },
+  "dependencies": { "hono": "4.13.16" },
+  "devDependencies": { "wrangler": "4.155.0" }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "krun-astro-demo",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "astro build",
+    "dev": "astro dev",
+    "check": "wrangler deploy --dry-run --outdir .data/worker"
+  },
+  "dependencies": {
+    "@astrojs/cloudflare": "12.6.13",
+    "astro": "5.18.2"
+  },
+  "devDependencies": {
+    "wrangler": "4.155.0"
+  }
+}

@@ -1,0 +1,14 @@
+---
+export const prerender = false;
+const name = Astro.url.searchParams.get('name')?.trim() || 'krun';
+---
+<!doctype html>
+<html lang="zh-CN">
+  <head><meta charset="utf-8" /><title>Astro on krun</title></head>
+  <body>
+    <h1>Astro on krun</h1>
+    <p>你好，{name}！此页面由 Astro 在 Worker 中按请求渲染。</p>
+    <form><label>你的名字 <input name="name" /></label><button>问候</button></form>
+    <p><a href="/api/hello?name=krun">查看 JSON API</a></p>
+  </body>
+</html>
