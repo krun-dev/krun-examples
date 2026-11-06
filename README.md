@@ -1,9 +1,10 @@
 # krun examples
 
-可独立构建、部署到 krun 的 Workers 示例。每个项目都有自己的前端、Worker、锁文件和 Wrangler 配置。
+可独立构建、部署到 krun Workers 的示例。每个项目都有自己的锁文件和 Wrangler 配置；纯静态示例由 Workers runtime 服务资产，无需用户编写 Worker 入口，其余示例包含业务 Worker 代码。
 
 | 示例 | 功能 | 项目目录 |
 | --- | --- | --- |
+| [一隅 · 静态小站](examples/static-site) | 纯 HTML / CSS / SVG，assets-only 部署，无 Worker 入口或资源绑定 | `examples/static-site` |
 | [拾光 · Photo Wall](examples/photo-wall) | 无需数据库的轻量照片墙，Worker + R2 | `examples/photo-wall` |
 | [Hono Worker](examples/hono) | Hono 页面与 JSON API | `examples/hono` |
 | [Astro Worker](examples/astro) | Astro 服务端渲染与 JSON API | `examples/astro` |

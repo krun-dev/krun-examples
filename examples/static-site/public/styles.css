@@ -1,0 +1,627 @@
+:root {
+  color-scheme: light;
+  --paper: #f6f4eb;
+  --ink: #303c30;
+  --muted: #76796b;
+  --olive: #535f3b;
+  --orange: #bd603c;
+  --line: #dadccf;
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 28px;
+}
+body {
+  margin: 0;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a,
+summary {
+  -webkit-tap-highlight-color: transparent;
+}
+a:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--orange);
+  outline-offset: 6px;
+}
+::selection {
+  background: #e0e4c9;
+}
+.site-shell {
+  width: min(1200px, calc(100% - 112px));
+  margin-inline: auto;
+}
+.skip-link {
+  position: fixed;
+  top: -100px;
+  left: 24px;
+  z-index: 10;
+  background: var(--ink);
+  color: var(--paper);
+  padding: 14px 22px;
+}
+.skip-link:focus {
+  top: 12px;
+}
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 32px;
+  border-bottom: 1px solid var(--line);
+}
+.wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: "Songti SC", "Noto Serif CJK SC", serif;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.brand-symbol {
+  font-family: Georgia, serif;
+  font-size: 46px;
+  line-height: 1;
+  font-weight: 400;
+  color: var(--olive);
+}
+.brand-en {
+  display: block;
+  margin-top: 3px;
+  font-family: Georgia, serif;
+  font-size: 11px;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: 1px;
+}
+.site-header nav {
+  display: flex;
+  gap: 36px;
+  font-size: 13px;
+}
+.site-header nav a {
+  padding-block: 10px;
+}
+.site-header nav a:hover {
+  color: var(--orange);
+}
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+  padding-block: 64px 58px;
+}
+.eyebrow {
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 2.2px;
+  line-height: 1.6;
+}
+.hero .eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 30px;
+}
+.small-line {
+  display: inline-block;
+  width: 28px;
+  height: 1px;
+  background: var(--olive);
+}
+h1,
+h2,
+p,
+figure {
+  margin: 0;
+}
+h1,
+h2,
+.note-title {
+  font-family: "Songti SC", "Noto Serif CJK SC", "STSong", serif;
+}
+h1 {
+  font-size: clamp(40px, 4.35vw, 64px);
+  line-height: 1.48;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.title-accent {
+  position: relative;
+  z-index: 0;
+}
+.title-accent::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: -4px;
+  right: -4px;
+  bottom: 6px;
+  height: 12px;
+  background: #dbe0c2;
+  transform: rotate(-2deg);
+  border-radius: 40%;
+}
+.hero-description {
+  margin-top: 24px;
+  color: #69705e;
+  font-size: 14px;
+  line-height: 2;
+  letter-spacing: 0.8px;
+}
+.primary-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 44px;
+  padding: 16px 22px;
+  background: var(--olive);
+  color: #fffdf4;
+  border-radius: 3px;
+  margin-top: 32px;
+  font-size: 13px;
+  transition:
+    background 160ms,
+    transform 160ms;
+}
+.primary-link span {
+  font-size: 22px;
+  line-height: 1;
+}
+.primary-link:hover {
+  background: #39482b;
+  transform: translateY(-2px);
+}
+.hero-footnote {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 48px;
+}
+.sun-symbol {
+  color: var(--orange);
+  font-family: Georgia, serif;
+  font-size: 42px;
+  line-height: 1;
+}
+.hero-footnote p {
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.8;
+  letter-spacing: 1px;
+}
+.garden-card {
+  transform: rotate(2deg);
+  padding: 13px 13px 0;
+  background: #ebe9dd;
+  border: 1px solid #e4e1d3;
+  box-shadow: 0 10px 24px #3e452709;
+}
+.artwork-frame {
+  position: relative;
+  overflow: hidden;
+  background: #e6e7d7;
+}
+.artwork-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.artwork-label {
+  position: absolute;
+  top: 22px;
+  left: 23px;
+  font-family: Arial, sans-serif;
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: #5b654a;
+}
+.artwork-stamp {
+  position: absolute;
+  right: 19px;
+  bottom: 20px;
+  display: grid;
+  place-content: center;
+  width: 66px;
+  height: 66px;
+  border: 1px solid #a95436;
+  border-radius: 50%;
+  outline: 1px solid #a95436;
+  outline-offset: -5px;
+  color: #a95436;
+  font-family: "Songti SC", serif;
+  font-size: 15px;
+  letter-spacing: 3px;
+  line-height: 1.5;
+  transform: rotate(-12deg);
+}
+figcaption {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding-block: 16px;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+figcaption span:last-child {
+  color: #747867;
+  font-family: Arial, sans-serif;
+  font-size: 8px;
+  align-self: center;
+}
+.section-divider {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  border-block: 1px solid var(--line);
+  padding-block: 17px;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  color: #7b806e;
+}
+.section-divider span:first-child {
+  font-family: Arial, sans-serif;
+  letter-spacing: 2px;
+}
+.notes-section {
+  display: grid;
+  grid-template-columns: 0.85fr 1.5fr;
+  gap: 64px;
+  padding-block: 64px 70px;
+}
+.section-intro .eyebrow {
+  color: var(--orange);
+  margin-bottom: 16px;
+}
+h2 {
+  font-size: 34px;
+  font-weight: 500;
+  line-height: 1.6;
+}
+.section-intro > p:not(.eyebrow) {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 2;
+  margin-top: 16px;
+}
+.handwritten {
+  display: inline-block;
+  font-family: Georgia, serif;
+  font-size: 20px;
+  font-style: italic;
+  color: #8a9178;
+  transform: rotate(-7deg);
+  margin-top: 26px;
+}
+.notes-list details {
+  border-bottom: 1px solid var(--line);
+}
+.notes-list details:first-child {
+  border-top: 1px solid var(--line);
+}
+summary {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+  list-style: none;
+  padding-block: 24px;
+}
+summary::-webkit-details-marker {
+  display: none;
+}
+.note-number {
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 16px;
+  color: #969c86;
+  align-self: flex-start;
+  padding-top: 22px;
+}
+.note-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.note-category {
+  font-family: Arial, sans-serif;
+  color: var(--muted);
+  font-size: 9px;
+  letter-spacing: 1.4px;
+}
+.note-title {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+.expand-icon {
+  margin-left: auto;
+  flex: 0 0 24px;
+  height: 24px;
+  position: relative;
+}
+.expand-icon::before,
+.expand-icon::after {
+  content: "";
+  position: absolute;
+  top: 11px;
+  left: 6px;
+  width: 12px;
+  height: 1px;
+  background: var(--olive);
+}
+.expand-icon::after {
+  transform: rotate(90deg);
+}
+details[open] .expand-icon::after {
+  transform: none;
+}
+summary:hover .note-title {
+  color: var(--orange);
+}
+.note-body {
+  padding: 0 36px 24px 37px;
+  font-size: 12px;
+  line-height: 2.1;
+  color: #6d7361;
+}
+.note-tip {
+  margin-top: 14px;
+  color: var(--orange);
+  font-size: 11px;
+}
+.about-section {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  background: #e9ecde;
+  padding: 34px 38px;
+  border-radius: 3px;
+}
+.about-flower {
+  font-family: Georgia, serif;
+  font-size: 78px;
+  color: #7a8960;
+  line-height: 1;
+}
+.about-section .eyebrow {
+  color: #768267;
+  font-size: 8px;
+  margin-bottom: 8px;
+}
+.about-section h2 {
+  font-size: 25px;
+}
+.about-section p:not(.eyebrow) {
+  margin-top: 10px;
+  font-size: 11px;
+  line-height: 2;
+  color: #6c755f;
+}
+.back-to-top {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  margin-left: auto;
+  border: 1px solid #a8b198;
+  border-radius: 50%;
+  font-size: 22px;
+}
+.back-to-top:hover {
+  background: #dae0cd;
+}
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding-block: 28px;
+  margin-top: 22px;
+  font-size: 9px;
+  letter-spacing: 1.3px;
+  color: #7c816f;
+}
+.footer-dot {
+  color: #89986c;
+  font-size: 8px;
+  margin-left: 12px;
+}
+
+@media (min-width: 1440px) {
+  .hero {
+    gap: 100px;
+  }
+  h1 {
+    font-size: 68px;
+  }
+}
+
+@media (max-width: 960px) {
+  .site-shell {
+    width: calc(100% - 64px);
+  }
+  .hero {
+    gap: 32px;
+    padding-block: 50px;
+  }
+  .hero .eyebrow {
+    font-size: 8px;
+    letter-spacing: 1.6px;
+  }
+  h1 {
+    font-size: 40px;
+  }
+  .hero-footnote {
+    margin-top: 30px;
+  }
+  .artwork-label {
+    top: 15px;
+    left: 15px;
+    font-size: 7px;
+  }
+  .artwork-stamp {
+    width: 54px;
+    height: 54px;
+    font-size: 12px;
+  }
+  .notes-section {
+    grid-template-columns: 0.8fr 1.5fr;
+    gap: 34px;
+  }
+  .note-title {
+    font-size: 19px;
+  }
+  figcaption {
+    letter-spacing: 0;
+  }
+  figcaption span:last-child {
+    font-size: 7px;
+  }
+}
+
+@media (max-width: 680px) {
+  html {
+    scroll-padding-top: 20px;
+  }
+  .site-shell {
+    width: calc(100% - 40px);
+  }
+  .site-header {
+    padding-block: 22px;
+  }
+  .wordmark {
+    font-size: 23px;
+    gap: 8px;
+  }
+  .brand-symbol {
+    font-size: 38px;
+  }
+  .brand-en {
+    font-size: 9px;
+  }
+  .site-header nav {
+    gap: 20px;
+    font-size: 11px;
+  }
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding-block: 42px;
+  }
+  .hero .eyebrow {
+    margin-bottom: 20px;
+    font-size: 9px;
+  }
+  h1 {
+    font-size: clamp(36px, 10vw, 54px);
+    line-height: 1.45;
+  }
+  .hero-description {
+    margin-top: 20px;
+    font-size: 13px;
+  }
+  .primary-link {
+    margin-top: 24px;
+  }
+  .hero-footnote {
+    display: none;
+  }
+  .garden-card {
+    width: calc(100% - 12px);
+    justify-self: center;
+    padding: 10px 10px 0;
+  }
+  .artwork-label {
+    font-size: 9px;
+    top: 20px;
+    left: 20px;
+  }
+  figcaption {
+    padding-block: 14px;
+    font-size: 10px;
+  }
+  figcaption span:last-child {
+    font-size: 8px;
+  }
+  .section-divider {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    font-size: 9px;
+  }
+  .notes-section {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding-block: 42px;
+  }
+  .section-intro h2 br {
+    display: none;
+  }
+  .section-intro h2 {
+    font-size: 30px;
+  }
+  .section-intro > p:not(.eyebrow) br {
+    display: none;
+  }
+  .handwritten {
+    display: none;
+  }
+  .note-title {
+    font-size: 20px;
+  }
+  summary {
+    gap: 14px;
+  }
+  .note-body {
+    padding-left: 31px;
+    padding-right: 20px;
+  }
+  .about-section {
+    padding: 26px 22px;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  .about-flower {
+    font-size: 38px;
+    padding-top: 28px;
+  }
+  .about-section h2 {
+    font-size: 23px;
+  }
+  .about-section p:not(.eyebrow) br {
+    display: none;
+  }
+  .back-to-top {
+    display: none;
+  }
+  .site-footer {
+    padding-block: 24px;
+    flex-wrap: wrap;
+    font-size: 8px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .primary-link {
+    transition: none;
+  }
+}
