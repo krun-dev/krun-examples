@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f3f0e8" />
+    <title>留白 · 待办清单</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <script type="module" src="/app.js"></script>
+  </head>
+  <body>
+    <main class="workspace">
+      <header class="masthead">
+        <div class="brand"><span aria-hidden="true">◇</span> 留白 / TODO</div>
+        <div class="stack-label">KRUN WORKERS <span>×</span> POSTGRESQL</div>
+      </header>
+      <section class="hero" aria-labelledby="page-title">
+        <div>
+          <p class="eyebrow">个人清单</p>
+          <h1 id="page-title">待办事项</h1>
+          <p class="intro">记下要做的事，完成一件就划掉一件。</p>
+        </div>
+        <dl class="totals">
+          <div>
+            <dt>待完成</dt>
+            <dd id="pending-count">—</dd>
+          </div>
+          <div>
+            <dt>已完成</dt>
+            <dd id="completed-count">—</dd>
+          </div>
+        </dl>
+      </section>
+      <section class="board" aria-label="待办列表">
+        <form id="todo-form" class="composer">
+          <label for="todo-title">新待办</label>
+          <div class="composer-row">
+            <input
+              id="todo-title"
+              name="title"
+              maxlength="120"
+              placeholder="今天要做什么？"
+              required
+            />
+            <button class="primary" type="submit" disabled>添加待办</button>
+          </div>
+        </form>
+        <div class="toolbar">
+          <div class="filters" aria-label="筛选待办">
+            <button type="button" data-filter="all" aria-pressed="true">
+              全部
+            </button>
+            <button type="button" data-filter="pending" aria-pressed="false">
+              待完成
+            </button>
+            <button type="button" data-filter="completed" aria-pressed="false">
+              已完成
+            </button>
+          </div>
+          <button type="button" id="reload" class="secondary">刷新</button>
+        </div>
+        <p id="status" class="status" role="status"></p>
+        <p id="error" class="error" role="alert" hidden></p>
+        <ul id="todos" aria-label="任务"></ul>
+        <div id="empty" class="empty" hidden></div>
+      </section>
+      <footer>
+        最近 100 条待办 <span aria-hidden="true">·</span> 数据保存在 PostgreSQL
+      </footer>
+    </main>
+    <template id="todo-template">
+      <li class="task">
+        <label class="task-label">
+          <input type="checkbox" />
+          <span class="task-title"></span>
+        </label>
+        <button type="button" class="remove">删除</button>
+      </li>
+    </template>
+  </body>
+</html>

@@ -1,0 +1,285 @@
+:root {
+  color-scheme: light dark;
+  --paper: #f3f0e8;
+  --panel: #fffcf4;
+  --ink: #20251f;
+  --muted: #52594e;
+  --line: #d8d4c9;
+  --accent: #31533f;
+  --on-accent: #fffdf7;
+  --selected: #e1eadf;
+  --error: #8e342a;
+  font-family:
+    system-ui,
+    -apple-system,
+    "PingFang SC",
+    "Microsoft YaHei",
+    sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #20261f;
+    --panel: #282f27;
+    --ink: #f2f0e6;
+    --muted: #b9c2b3;
+    --line: #4b5548;
+    --accent: #b8d7a9;
+    --on-accent: #223121;
+    --selected: #374936;
+    --error: #ffb4a8;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+button,
+input {
+  font: inherit;
+}
+button {
+  cursor: pointer;
+}
+button:disabled,
+input:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+[hidden] {
+  display: none !important;
+}
+
+.workspace {
+  width: min(100% - 2rem, 52rem);
+  margin: 0 auto;
+  padding: clamp(1.2rem, 4vw, 3rem) 0 3rem;
+}
+
+.masthead,
+.hero,
+.toolbar,
+.composer-row,
+.task,
+.task-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.masthead {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.78rem;
+  letter-spacing: 0.09em;
+  font-weight: 700;
+}
+
+.brand span {
+  color: var(--accent);
+  font-size: 1.1rem;
+}
+.stack-label {
+  color: var(--muted);
+  text-align: right;
+}
+.stack-label span,
+footer span {
+  padding: 0 0.25em;
+}
+.hero {
+  padding: clamp(2rem, 6vw, 4.2rem) 0 2rem;
+  align-items: end;
+}
+.eyebrow {
+  color: var(--accent);
+  margin: 0 0 0.5rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+}
+h1 {
+  font-size: clamp(2.3rem, 8vw, 4.5rem);
+  line-height: 1.08;
+  margin: 0;
+  letter-spacing: -0.055em;
+}
+.intro {
+  color: var(--muted);
+  margin: 0.8rem 0 0;
+}
+.totals {
+  display: flex;
+  gap: clamp(1rem, 4vw, 2.5rem);
+  margin: 0 0 0.2rem;
+}
+.totals div {
+  border-left: 1px solid var(--line);
+  padding-left: 0.85rem;
+  white-space: nowrap;
+}
+.totals dt {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+.totals dd {
+  font-size: 2rem;
+  line-height: 1.2;
+  font-variant-numeric: tabular-nums;
+  margin: 0.35rem 0 0;
+}
+
+.board {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.composer {
+  padding: clamp(1rem, 3vw, 1.6rem);
+  border-bottom: 1px solid var(--line);
+}
+.composer label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 650;
+}
+.composer-row {
+  gap: 0.65rem;
+}
+#todo-title {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid var(--line);
+  border-radius: 0.55rem;
+  padding: 0.75rem;
+  background: var(--paper);
+  color: var(--ink);
+}
+#todo-title::placeholder {
+  color: var(--muted);
+}
+.primary,
+.secondary,
+.filters button,
+.remove {
+  border: 0;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.7rem;
+  color: var(--muted);
+  background: transparent;
+  white-space: nowrap;
+}
+.primary {
+  background: var(--accent);
+  color: var(--on-accent);
+  font-weight: 650;
+  padding: 0.8rem 1rem;
+}
+.toolbar {
+  padding: 0.75rem clamp(0.75rem, 3vw, 1.6rem);
+  border-bottom: 1px solid var(--line);
+}
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem;
+}
+.filters button[aria-pressed="true"] {
+  background: var(--selected);
+  color: var(--ink);
+  font-weight: 650;
+}
+.secondary:hover,
+.filters button:hover,
+.remove:hover {
+  background: var(--selected);
+  color: var(--ink);
+}
+.status,
+.error {
+  margin: 0;
+  padding: 0.7rem 1.6rem;
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+.status:empty {
+  position: absolute;
+  padding: 0;
+}
+.error {
+  color: var(--error);
+}
+#todos {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.task {
+  padding: 0.65rem clamp(0.75rem, 3vw, 1.6rem);
+  min-height: 3.8rem;
+}
+.task + .task {
+  border-top: 1px solid var(--line);
+}
+.task-label {
+  justify-content: start;
+  min-width: 0;
+  flex: 1;
+  cursor: pointer;
+}
+.task-label input {
+  width: 1.15rem;
+  height: 1.15rem;
+  margin: 0;
+  flex: none;
+  accent-color: var(--accent);
+}
+.task-title {
+  overflow-wrap: anywhere;
+}
+.task-label input:checked + .task-title {
+  text-decoration: line-through;
+  color: var(--muted);
+}
+.remove {
+  font-size: 0.85rem;
+}
+.empty {
+  padding: 3rem 1rem;
+  text-align: center;
+  color: var(--muted);
+}
+footer {
+  color: var(--muted);
+  font-size: 0.8rem;
+  text-align: right;
+  margin-top: 1rem;
+}
+
+@media (max-width: 38rem) {
+  .hero {
+    flex-wrap: wrap;
+    align-items: start;
+  }
+  .totals {
+    margin-top: 0.4rem;
+  }
+  .totals dd {
+    font-size: 1.6rem;
+  }
+  .stack-label {
+    font-size: 0.65rem;
+  }
+}

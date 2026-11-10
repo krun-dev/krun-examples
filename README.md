@@ -8,6 +8,7 @@
 | [拾光 · Photo Wall](examples/photo-wall) | 无需数据库的轻量照片墙，Worker + R2 | `examples/photo-wall` |
 | [Hono Worker](examples/hono) | Hono 页面与 JSON API | `examples/hono` |
 | [Astro Worker](examples/astro) | Astro 服务端渲染与 JSON API | `examples/astro` |
+| [留白 · PostgreSQL 待办清单](examples/postgres-todo) | 静态前端、Worker JSON API 和 PostgreSQL 持久化 | `examples/postgres-todo` |
 | [拾物 · Object Studio](examples/object-storage) | 文件工作台：上传、预览、下载、搜索与 R2 对象存储 | `examples/object-storage` |
 
 在 krun 中关联此仓库，选择项目目录后执行构建、绑定资源并发布。具体步骤见各项目 README。
